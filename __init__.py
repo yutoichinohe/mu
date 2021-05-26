@@ -4,9 +4,10 @@ import time,datetime
 def minmax(x):
     return np.min(x),np.max(x)
 
-def array_info(a):
+def array_info(a,dump=True):
     values=np.min(a),np.max(a),a.shape
-    print(*values)
+    if dump:
+        print(*values)
     return values
 
 def stopwatch(func):
