@@ -14,7 +14,9 @@ def stopwatch(func):
     def _f(*args, **kwargs):
         start=time.time()
         print(f'# [START]\t{datetime.datetime.now()}')
-        func(*args, **kwargs)
+        ret=func(*args, **kwargs)
         print(f'# [END]\t\t{datetime.datetime.now()}\n# ELAPSED\t{time.time()-start:.3E} sec')
+        return ret
+
     return _f
 
