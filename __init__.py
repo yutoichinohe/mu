@@ -4,6 +4,10 @@ import time,datetime
 def minmax(x):
     return np.min(x),np.max(x)
 
+def minmaxnorm(x):
+    _min,_max=minmax(x)
+    return (x-_min)/(_max-_min)
+
 def array_info(a,dump=True):
     values=np.min(a),np.max(a),a.shape
     if dump:
