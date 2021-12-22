@@ -1,3 +1,4 @@
+import sys,os
 import numpy as np
 import time,datetime
 
@@ -24,3 +25,6 @@ def stopwatch(func):
 
     return _f
 
+def mkdirif(dirname):
+    if not os.path.exists(dirname):
+        os.makedirs(dirname)
